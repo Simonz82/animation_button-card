@@ -1,0 +1,622 @@
+type: custom:mod-card
+style:
+  .: ""
+  hui-vertical-stack-card:
+    $:
+      .: |
+        #root {
+          gap: 5px !important;
+          padding-top: 5px !important;
+          padding-right: 5px !important;
+          padding-left: 5px !important;
+          padding-bottom: 5px !important;
+        }
+card:
+  type: vertical-stack
+  cards:
+    - type: horizontal-stack #linea 1
+      cards:
+        - type: custom:button-card #luce 1
+          show_entity_picture: true
+          state:
+            - value: "off"
+              icon: mdi:lightbulb-outline
+              color: "#FFFFFF"
+            - value: "on"
+              icon: mdi:lightbulb-on
+              color: yellow
+          styles:
+            name:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+            card:
+              - border: |
+                  [[[
+                    return (entity.state == 'on') ? '3px solid yellow' : '2px solid rgb(216, 235, 52, 30%)';
+                  ]]]
+              - box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3)
+              - height: 70px
+              - font-size: 13px
+            state:
+              - font-size: 13px
+              - font-weight: null
+            icon:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+              - width: 50px
+              - height: 50px
+              - animation: |
+                  [[[
+                    return (entity.state == 'on') ? 'blink 1s infinite' : 'none';
+                  ]]]
+          tap_action:
+            action: toggle
+          entity: light.striscia_cucina
+          show_state: false
+          size: 100%
+          name: Strip cucina
+          extra_styles: |
+            @keyframes blink {
+              0% { opacity: 1; }
+              50% { opacity: 0; }
+              100% { opacity: 1; }
+            }
+        - type: custom:button-card #luce 2
+          show_entity_picture: true
+          state:
+            - value: "off"
+              icon: mdi:lightbulb-outline
+              color: "#FFFFFF"
+            - value: "on"
+              icon: mdi:lightbulb-on
+              color: yellow
+          styles:
+            name:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+            card:
+              - border: |
+                  [[[
+                    return (entity.state == 'on') ? '3px solid yellow' : '2px solid rgb(216, 235, 52, 30%)';
+                  ]]]
+              - box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3)
+              - height: 70px
+              - font-size: 13px
+            state:
+              - font-size: 13px
+              - font-weight: null
+            icon:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+              - width: 50px
+              - height: 50px
+              - animation: |
+                  [[[
+                    return (entity.state == 'on') ? 'pulse 1.5s infinite' : 'none';
+                  ]]]
+          tap_action:
+            action: toggle
+          entity: light.striscia_cucina
+          show_state: false
+          size: 100%
+          name: Strip cucina
+          extra_styles: |
+            @keyframes pulse {
+              0% { transform: scale(1); }
+              50% { transform: scale(1.2); }
+              100% { transform: scale(1); }
+            }
+        - type: custom:button-card #luce 3
+          show_entity_picture: true
+          state:
+            - value: "off"
+              icon: mdi:lightbulb-outline
+              color: "#FFFFFF"
+            - value: "on"
+              icon: mdi:lightbulb-on
+              color: yellow
+          styles:
+            name:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+            card:
+              - border: |
+                  [[[
+                    return (entity.state == 'on') ? '3px solid yellow' : '2px solid rgb(216, 235, 52, 30%)';
+                  ]]]
+              - box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3)
+              - height: 70px
+              - font-size: 13px
+            state:
+              - font-size: 13px
+              - font-weight: null
+            icon:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+              - width: 50px
+              - height: 50px
+              - animation: |
+                  [[[
+                    return (entity.state == 'on') ? 'spin 3s infinite linear' : 'none';
+                  ]]]
+          tap_action:
+            action: toggle
+          entity: light.striscia_cucina
+          show_state: false
+          size: 100%
+          name: Strip cucina
+          extra_styles: |
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+        - type: custom:button-card #luce 4
+          show_entity_picture: true
+          state:
+            - value: "off"
+              icon: mdi:lightbulb-outline
+              color: "#FFFFFF"
+            - value: "on"
+              icon: mdi:lightbulb-on
+              color: yellow
+          styles:
+            name:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+            card:
+              - border: |
+                  [[[
+                    return (entity.state == 'on') ? '3px solid yellow' : '2px solid rgb(216, 235, 52, 30%)';
+                  ]]]
+              - box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3)
+              - height: 70px
+              - font-size: 13px
+            state:
+              - font-size: 13px
+              - font-weight: null
+            icon:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+              - width: 50px
+              - height: 50px
+              - animation: |
+                  [[[
+                    return (entity.state == 'on') ? 'glow 1.5s infinite' : 'none';
+                  ]]]
+          tap_action:
+            action: toggle
+          entity: light.striscia_cucina
+          show_state: false
+          size: 100%
+          name: Strip cucina
+          extra_styles: |
+            @keyframes glow {
+              0% { filter: drop-shadow(0 0 2px rgba(255, 255, 0, 0.5)); }
+              50% { filter: drop-shadow(0 0 8px rgba(255, 255, 0, 1)); }
+              100% { filter: drop-shadow(0 0 2px rgba(255, 255, 0, 0.5)); }
+            }
+    - type: horizontal-stack #linea 2
+      cards:
+        - type: custom:button-card #luce 1
+          show_entity_picture: true
+          state:
+            - value: "off"
+              icon: mdi:lightbulb-outline
+              color: "#FFFFFF"
+            - value: "on"
+              icon: mdi:lightbulb-on
+              color: yellow
+          styles:
+            name:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+            card:
+              - border: |
+                  [[[
+                    return (entity.state == 'on') ? '3px solid yellow' : '2px solid rgb(216, 235, 52, 30%)';
+                  ]]]
+              - box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3)
+              - height: 70px
+              - font-size: 13px
+            state:
+              - font-size: 13px
+              - font-weight: null
+            icon:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+              - width: 50px
+              - height: 50px
+              - animation: |
+                  [[[
+                    return (entity.state == 'on') ? 'swing 1s infinite' : 'none';
+                  ]]]
+          tap_action:
+            action: toggle
+          entity: light.striscia_cucina
+          show_state: false
+          size: 100%
+          name: Strip cucina
+          extra_styles: |
+            @keyframes swing {
+              0% { transform: rotate(-5deg); }
+              50% { transform: rotate(5deg); }
+              100% { transform: rotate(-5deg); }
+            }
+        - type: custom:button-card #luce 2
+          show_entity_picture: true
+          state:
+            - value: "off"
+              icon: mdi:lightbulb-outline
+              color: "#FFFFFF"
+            - value: "on"
+              icon: mdi:lightbulb-on
+              color: yellow
+          styles:
+            name:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+            card:
+              - border: |
+                  [[[
+                    return (entity.state == 'on') ? '3px solid yellow' : '2px solid rgb(216, 235, 52, 30%)';
+                  ]]]
+              - box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3)
+              - height: 70px
+              - font-size: 13px
+            state:
+              - font-size: 13px
+              - font-weight: null
+            icon:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+              - width: 50px
+              - height: 50px
+              - animation: |
+                  [[[
+                    return (entity.state == 'on') ? 'shake 0.5s infinite' : 'none';
+                  ]]]
+          tap_action:
+            action: toggle
+          entity: light.striscia_cucina
+          show_state: false
+          size: 100%
+          name: Strip cucina
+          extra_styles: |
+            @keyframes shake {
+              0% { transform: translateX(0); }
+              25% { transform: translateX(2px); }
+        - type: custom:button-card #luce 3
+          show_entity_picture: true
+          state:
+            - value: "off"
+              icon: mdi:lightbulb-outline
+              color: "#FFFFFF"
+            - value: "on"
+              icon: mdi:lightbulb-on
+              color: yellow
+          styles:
+            name:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+            card:
+              - border: |
+                  [[[
+                    return (entity.state == 'on') ? '3px solid yellow' : '2px solid rgb(216, 235, 52, 30%)';
+                  ]]]
+              - box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3)
+              - height: 70px
+              - font-size: 13px
+            state:
+              - font-size: 13px
+              - font-weight: null
+            icon:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+              - width: 50px
+              - height: 50px
+              - animation: |
+                  [[[
+                    return (entity.state == 'on') ? 'bounce 1s infinite' : 'none';
+                  ]]]
+          tap_action:
+            action: toggle
+          entity: light.striscia_cucina
+          show_state: false
+          size: 100%
+          name: Strip cucina
+          extra_styles: |
+            @keyframes bounce {
+              0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+              40% { transform: translateY(-10px); }
+              60% { transform: translateY(-5px); }
+            }
+        - type: custom:button-card #luce 4
+          show_entity_picture: true
+          state:
+            - value: "off"
+              icon: mdi:lightbulb-outline
+              color: "#FFFFFF"
+            - value: "on"
+              icon: mdi:lightbulb-on
+              color: yellow
+          styles:
+            name:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+            card:
+              - border: |
+                  [[[
+                    return (entity.state == 'on') ? '3px solid yellow' : '2px solid rgb(216, 235, 52, 30%)';
+                  ]]]
+              - box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3)
+              - height: 70px
+              - font-size: 13px
+            state:
+              - font-size: 13px
+              - font-weight: null
+            icon:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+              - width: 50px
+              - height: 50px
+              - animation: |
+                  [[[
+                    return (entity.state == 'on') ? 'wobble 1s infinite' : 'none';
+                  ]]]
+          tap_action:
+            action: toggle
+          entity: light.striscia_cucina
+          show_state: false
+          size: 100%
+          name: Strip cucina
+          extra_styles: |
+            @keyframes wobble {
+              0% { transform: rotate(0deg); }
+              15% { transform: rotate(5deg); }
+              30% { transform: rotate(-5deg); }
+              45% { transform: rotate(3deg); }
+              60% { transform: rotate(-3deg); }
+              75% { transform: rotate(1deg); }
+              100% { transform: rotate(0deg); }
+            }
+    - type: horizontal-stack #linea 3
+      cards:
+        - type: custom:button-card #luce 1
+          show_entity_picture: true
+          state:
+            - value: "off"
+              icon: mdi:lightbulb-outline
+              color: "#FFFFFF"
+            - value: "on"
+              icon: mdi:lightbulb-on
+              color: yellow
+          styles:
+            name:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+            card:
+              - border: |
+                  [[[
+                    return (entity.state == 'on') ? '3px solid yellow' : '2px solid rgb(216, 235, 52, 30%)';
+                  ]]]
+              - box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3)
+              - height: 70px
+              - font-size: 13px
+            state:
+              - font-size: 13px
+              - font-weight: null
+            icon:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+              - width: 50px
+              - height: 50px
+              - animation: |
+                  [[[
+                    return (entity.state == 'on') ? 'zoom 0.8s infinite' : 'none';
+                  ]]]
+          tap_action:
+            action: toggle
+          entity: light.striscia_cucina
+          show_state: false
+          size: 100%
+          name: Strip cucina
+          extra_styles: |
+            @keyframes zoom {
+              0% { transform: scale(1); }
+              50% { transform: scale(1.15); }
+              100% { transform: scale(1); }
+            }
+        - type: custom:button-card #luce 2
+          show_entity_picture: true
+          state:
+            - value: "off"
+              icon: mdi:lightbulb-outline
+              color: "#FFFFFF"
+            - value: "on"
+              icon: mdi:lightbulb-on
+              color: yellow
+          styles:
+            name:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+            card:
+              - border: |
+                  [[[
+                    return (entity.state == 'on') ? '3px solid yellow' : '2px solid rgb(216, 235, 52, 30%)';
+                  ]]]
+              - box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3)
+              - height: 70px
+              - font-size: 13px
+            state:
+              - font-size: 13px
+              - font-weight: null
+            icon:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+              - width: 50px
+              - height: 50px
+              - position: relative
+              - animation: |
+                  [[[
+                    return (entity.state == 'on') ? 'ripple 1.5s infinite' : 'none';
+                  ]]]
+          tap_action:
+            action: toggle
+          entity: light.striscia_cucina
+          show_state: false
+          size: 100%
+          name: Strip cucina
+          extra_styles: |
+            @keyframes ripple {
+              0% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7);
+              }
+              70% {
+                box-shadow: 0 0 0 10px rgba(255, 255, 0, 0);
+              }
+              100% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 0, 0);
+              }
+            }
+        - type: custom:button-card #luce 3
+          show_entity_picture: true
+          state:
+            - value: "off"
+              icon: mdi:lightbulb-outline
+              color: "#FFFFFF"
+            - value: "on"
+              icon: mdi:lightbulb-on
+              color: yellow
+          styles:
+            name:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+            card:
+              - border: |
+                  [[[
+                    return (entity.state == 'on') ? '3px solid yellow' : '2px solid rgb(216, 235, 52, 30%)';
+                  ]]]
+              - box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3)
+              - height: 70px
+              - font-size: 13px
+            state:
+              - font-size: 13px
+              - font-weight: null
+            icon:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+              - width: 50px
+              - height: 50px
+              - animation: |
+                  [[[
+                    return (entity.state == 'on') ? 'flicker 0.2s infinite' : 'none';
+                  ]]]
+          tap_action:
+            action: toggle
+          entity: light.striscia_cucina
+          show_state: false
+          size: 100%
+          name: Strip cucina
+          extra_styles: |
+            @keyframes flicker {
+              0% { opacity: 1; }
+              25% { opacity: 0.8; }
+              50% { opacity: 1; }
+              75% { opacity: 0.9; }
+              100% { opacity: 1; }
+            }
+        - type: custom:button-card #luce 4
+          show_entity_picture: true
+          state:
+            - value: "off"
+              icon: mdi:lightbulb-outline
+              color: "#FFFFFF"
+            - value: "on"
+              icon: mdi:lightbulb-on
+              color: yellow
+          styles:
+            name:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+            card:
+              - border: |
+                  [[[
+                    return (entity.state == 'on') ? '3px solid yellow' : '2px solid rgb(216, 235, 52, 30%)';
+                  ]]]
+              - box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3)
+              - height: 70px
+              - font-size: 13px
+            state:
+              - font-size: 13px
+              - font-weight: null
+            icon:
+              - color: |
+                  [[[
+                    return (entity.state == 'on') ? 'yellow' : 'white';
+                  ]]]
+              - width: 50px
+              - height: 50px
+              - animation: |
+                  [[[
+                    return (entity.state == 'on') ? 'twist 1s infinite' : 'none';
+                  ]]]
+          tap_action:
+            action: toggle
+          entity: light.striscia_cucina
+          show_state: false
+          size: 100%
+          name: Strip cucina
+          extra_styles: |
+            @keyframes twist {
+              0% { transform: rotate(0deg); }
+              25% { transform: rotate(15deg); }
+              50% { transform: rotate(0deg); }
+              75% { transform: rotate(-15deg); }
+              100% { transform: rotate(0deg); }
+            }
